@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{background:#0A0A1F;color:#F0C04A;font-family:Georgia,serif;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:20px;text-align:center;padding:20px;}
+button{background:rgba(240,192,74,.15);border:1px solid rgba(240,192,74,.5);color:#F0C04A;font-family:Georgia,serif;font-size:16px;padding:14px 32px;border-radius:12px;cursor:pointer;letter-spacing:1px;}
+button:active{background:rgba(240,192,74,.3);}
+.dim{color:rgba(255,255,255,.4);font-size:13px;}</style>
+</head><body>
+<div style="font-size:11px;letter-spacing:4px;color:rgba(240,192,74,.5)">THE PRINCESS'S KNIGHT</div>
+<div style="font-size:18px">重置所有資料</div>
+<div class="dim">這會清除本裝置上的所有進度，<br>重新回到最初的召喚頁面</div>
+<button onclick="doReset()">確認重置，重新開始</button>
+<a href="app.html" style="color:rgba(255,255,255,.3);font-size:13px;text-decoration:none">取消，返回APP</a>
+<script>
+function doReset(){
+  localStorage.clear();
+  sessionStorage.clear();
+  window.location.href='app.html';
+}
+</script>
+</body></html>
